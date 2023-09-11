@@ -26,9 +26,9 @@ public class Resolution extends JFrame {
         UIManager.put("OptionPane.cancelButtonText", "Отмена");
         UIManager.put("OptionPane.okButtonText", "OK");
 
-        Resolution frame = new Resolution();
 
-        Object result = JOptionPane.showInputDialog(frame, "Выбирете разрешение", "Выбор разрешение",
+
+        Object result = JOptionPane.showInputDialog(null, "Выбирете разрешение", "Выбор разрешение",
                 JOptionPane.PLAIN_MESSAGE, null, resolutions, resolutions[0]);
 
         if (result != null) {
@@ -53,6 +53,7 @@ public class Resolution extends JFrame {
             }
         }
 
+        Resolution frame = new Resolution();
         frame.initGui();
         frame.pack();
         frame.setVisible(true);
